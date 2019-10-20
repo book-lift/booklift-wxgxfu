@@ -1,0 +1,16 @@
+
+<nav>
+  <button id="hide-button">
+  <a routerLink="/search">
+    Back to Search
+  </a>
+  </button>
+</nav>
+
+<a *ngFor="let pickup of pickupInfo" routerLink="/details/{{pickup.taskID}}">
+<button>
+  <span>{{pickup.location}} ::</span> {{pickup.books}}
+</button>
+</a>
+
+

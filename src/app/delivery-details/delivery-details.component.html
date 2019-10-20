@@ -1,0 +1,66 @@
+
+<nav>
+  <button id="hide-button">
+  <a routerLink="/list">
+    Back
+  </a>
+  </button>
+</nav>
+
+<div *ngIf = 'pickupInfo'>
+
+<h1>{{pickupInfo.books}}<span> Books</span></h1> 
+
+<h3>Pickup</h3>
+<div><span>Location: </span>{{pickupInfo.location}}</div>
+<div><span>Timeframe: </span>{{pickupInfo.timeframe}}</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Pickup Instructions</button>
+  <div class="dropdown-content">
+    {{pickupInfo.instructions}}
+  </div>
+</div>
+
+<hr>
+
+<h3>Delivery</h3>
+<div><span>Location: </span>{{delivery.location}}</div>
+<div><span>Timeframe: </span>{{delivery.timeframe}}</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Delivery Instructions</button>
+  <div class="dropdown-content">
+    {{delivery.instructions}}
+  </div>
+</div>
+
+<hr>
+
+</div>
+
+<h3>For the Driver</h3>
+
+<div>
+  <span>Update Status   </span>
+  <select id="cmbAll" ng-change="onChange()" ng-model="cmbAll">
+        <option value="">-Select One-</option>
+        <option value="1">En Route</option>
+        <option value="2">Books Picked-Up</option>
+        <option value="3">Delivered</option>
+</select>
+
+</div> 
+
+<div>
+  <span>Can't make your pickup?   </span><button class="cancel-btn">Cancel Pickup</button>
+</div> 
+
+<hr>
+
+
+
+<button>
+  Pickup
+</button>
+

@@ -1,0 +1,42 @@
+#donation-view--number-input-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+#donation-view--number-input-container > * {
+  text-align: center;
+  padding: 16px 0px;
+  flex-basis: 33%;
+  font-size: 24px;
+}
+
+#donation-view--number-input-container > *:hover {
+  cursor: pointer;
+}
+
+#donation-view--donate-button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.6em 3em;
+  background-color: #fff;
+  border: 2px solid #111;
+  font-size: 32px;
+}
+
+#donation-view--donate-button:hover {
+  cursor: pointer;
+}
+
+#donation-view--instructions-button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.6em 3em;
+  background-color: #fff;
+  border: none;
+  font-size: 16px;
+}
+
+#donation-view--instructions-button:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,21 @@
+
+<!-- <app-example-info-page-1></app-example-info-page-1> -->
+
+<form>
+  <div>
+    <label for="city"> Zip-code </label>
+    <input required ngModel name="city" #city="ngModel" (change)="log(city)" id="city" type="text" class="form-control" placeholder="search">
+    <div class="alert alert-danger" *ngIf="city.touched && !city.valid">
+      <div *ngIf="city.errors.required">
+      Zip-code is required
+      </div>
+      
+    </div>
+
+  </div>
+  <button class="btn btn-primary">
+  <a routerLink="/list">
+    Find books
+  </a>
+  </button>
+</form>
