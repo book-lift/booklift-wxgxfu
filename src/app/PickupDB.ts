@@ -1,3 +1,4 @@
+
 import {Pickup} from './pickup';
 
 export const PICKUP: Pickup[]=[

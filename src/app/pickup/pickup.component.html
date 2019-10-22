@@ -1,0 +1,21 @@
+<h2>My Pickups</h2>
+
+<div>
+  <label>pickup name:
+    <input #pickupName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(pickupName.value); pickupName.value=''">
+    add
+  </button>
+</div>
+
+<ul class="pickups">
+  <li *ngFor="let pickup of pickups">
+    <a routerLink="/detail/{{pickup.id}}">
+      <span class="badge">{{pickup.id}}</span> {{pickup.name}}
+    </a>
+    <button class="delete" title="delete pickup"
+      (click)="delete(pickup)">x</button>
+  </li>
+</ul>

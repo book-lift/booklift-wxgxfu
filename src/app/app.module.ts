@@ -26,6 +26,9 @@ import { DeliveryDetailsComponent } from './delivery-details/delivery-details.co
 import { TaskService } from './task.service';
 import { DonationViewComponent } from './donation-view/donation-view.component';
 
+import { PickupService } from './pickup.service';
+import { PickupComponent } from './pickup/pickup.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/search', pathMatch: 'full' },
   {path:'list', component: ListComponent},
@@ -58,12 +61,13 @@ const routes: Routes = [
     DriverSectionComponent, 
     ExampleInfoPage1Component, 
     DeliveryDetailsComponent,
-    DonationViewComponent
+    DonationViewComponent,
+    PickupComponent
     ],
 
   bootstrap:    [ AppComponent ],
 
-  providers: [InMemoryDataService, PickupInfoService, TaskService],
+  providers: [InMemoryDataService, PickupInfoService, TaskService, InMemoryDataService, PickupService],
 
   
   
