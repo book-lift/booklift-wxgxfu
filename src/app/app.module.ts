@@ -28,6 +28,7 @@ import { DonationViewComponent } from './donation-view/donation-view.component';
 
 import { PickupService } from './pickup.service';
 import { PickupComponent } from './pickup/pickup.component';
+import { DataService } from './search/services/data.service';
 
 const routes: Routes = [
   { path: '', redirectTo: '/search', pathMatch: 'full' },
@@ -67,7 +68,7 @@ const routes: Routes = [
 
   bootstrap:    [ AppComponent ],
 
-  providers: [InMemoryDataService, PickupInfoService, TaskService, InMemoryDataService, PickupService],
+  providers: [InMemoryDataService, PickupInfoService, TaskService, InMemoryDataService, PickupService, DataService],
 
   
   
