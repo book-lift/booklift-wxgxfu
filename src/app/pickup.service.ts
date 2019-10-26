@@ -35,7 +35,7 @@ export class PickupService {
     }
 
     /** GET pickup by id. Return `undefined` when id not found */
-    getHeroNo404<Data>(id: number): Observable<Pickup> {
+    getPickupNo404<Data>(id: number): Observable<Pickup> {
       const url = `${this.pickupsUrl}/?id=${id}`;
       return this.http.get<Pickup[]>(url)
         .pipe(
